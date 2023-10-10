@@ -51,6 +51,7 @@ html {
     position: absolute;
 }
 
+/*
 .loader {
     position: fixed;
     height: 100vh;
@@ -94,6 +95,7 @@ html {
       transform: rotate(360deg);
     }
 }
+*/
 
 /*similar content styling*/
 section {
@@ -312,9 +314,9 @@ section .title::after {
     background: radial-gradient(circle, rgba(215,215,215,1) 0%, rgba(19,99,127,0.865338633996121) 100%);
   }
 
-  .home .home-content{
-    margin-right: 2rem;
-  }
+.home .home-content{
+      margin-right: 2rem;
+}
 .home .home-content .text-1{
     font-size: 2.7rem;
 }

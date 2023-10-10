@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   $(window).scroll(function(){
       // sticky navbar on scroll script
@@ -14,17 +15,6 @@ $(document).ready(function(){
           $('.scroll-up-btn').removeClass("show");
       }
   });
-
-  //loader scripts
-  window.onload = function() {
-    var loader = document.querySelector(".loader");
-    setTimeout (function(){
-        loader.style.opacity = "0";
-    setTimeout (function() {
-      loader.style.display = "none";
-    },1000);
-  },2000);
-};
 
       // slide-up script
       $('.scroll-up-btn').click(function(){
@@ -44,21 +34,6 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     });
 
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["BU Student", "Developer", "Web Designer"],
-        typeSpeed: 100,
-        backSpeed: 80,
-        loop: true
-    });
-
-    var typed = new Typed(".typing-2", {
-        strings: ["BU Student", "Developer", "Web Designer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
 //portfolio
 // Select relevant HTML elements
 var filterButtons = document.querySelectorAll("#filter-buttons button");
@@ -66,22 +41,22 @@ var filterableCards = document.querySelectorAll("#filterable-cards .card-tabs");
 
 // Function to filter cards based on filter buttons
 var filterCards = (e) => {
-    document.querySelector("#filter-buttons .active").classList.remove("active");
-    e.target.classList.add("active");
+document.querySelector("#filter-buttons .active").classList.remove("active");
+e.target.classList.add("active");
 
-    filterableCards.forEach(card => {
-        // show the card if it matches the clicked filter or show all cards if "all" filter is clicked
-        if(card.dataset.name === e.target.dataset.filter || e.target.dataset.filter === "all") {
-            return card.classList.replace("hide", "show");
-        }
-        card.classList.add("hide");
-    });
+filterableCards.forEach(card => {
+    // show the card if it matches the clicked filter or show all cards if "all" filter is clicked
+    if(card.dataset.name === e.target.dataset.filter || e.target.dataset.filter === "all") {
+        return card.classList.replace("hide", "show");
+    }
+    card.classList.add("hide");
+});
 }
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
     // owl carousel script
-    $('.carousel').owlCarousel({
+$('.carousel').owlCarousel({
         margin: 20,
         loop: true,
         autoplay: true,
@@ -101,6 +76,7 @@ filterButtons.forEach(button => button.addEventListener("click", filterCards));
                 nav: false
             }
         }
-    });
+});
 
+return 0;
 });

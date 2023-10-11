@@ -793,7 +793,8 @@ section .title::after {
     content: "Email Me";
 }
 .contact .contact-content .column{
-    width: calc(50% - 30px);
+    width: calc(50% - 40px);
+    height: auto;
 }
 
 .contact .left .icons_container {
@@ -802,6 +803,7 @@ section .title::after {
     flex-direction: row;
     justify-content: center;
 }
+
 
 .contact .left .icons_container .icons {
     padding: 1.9rem;
@@ -812,7 +814,7 @@ section .title::after {
     justify-content: center;
     align-items: center;
     font-size: .9rem;
-    margin: 0 .3rem;
+    margin: 0 .3rem 3rem;
     color: #fff;
     transition: all 0.5s ease;
     }
@@ -825,11 +827,12 @@ section .title::after {
     flex-wrap: wrap;
     transform: scale(1);
     position: relative;
-    box-shadow: 2px 2px 0.3rem black;
+    box-shadow: 3px 3px 0.3rem black;
     border: .2rem solid var(--black);
     color: #111;
     cursor: pointer;
     transition: all 0.5s ease;
+    margin: 0 .2rem 2rem;
 }
 
 .contact .left .icons_container .icons i{
@@ -844,10 +847,11 @@ section .title::after {
 }
 
 .contact .left .icons_container .icons p{
-    font-size: 1rem;
+    font-size: .5rem;
     line-height: 0.9;
     text-align: center;
     text-wrap: wrap;
+    padding: .1rem;
     }
 
 .contact .left .mapouter { 

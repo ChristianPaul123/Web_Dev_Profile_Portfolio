@@ -812,7 +812,7 @@ section .title::after {
     align-items: center;
     font-size: .9rem;
     margin: 0 .3rem 3rem;
-    color: #fff;
+    color: var(--lightgray-bg);
     transition: all 0.5s ease;
     }
 
@@ -822,7 +822,7 @@ section .title::after {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    transform: scale(1);
+    transform: scale(2);
     position: relative;
     box-shadow: 3px 3px 0.3rem black;
     border: .2rem solid var(--black);

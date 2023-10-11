@@ -51,12 +51,13 @@ html {
     position: absolute;
 }
 
-/*
+
 .loader {
     position: fixed;
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--black);
@@ -67,7 +68,17 @@ html {
     transform: translate(-50%, -50%);
     z-index: 9999;
 }
-  
+
+.loading_page_text {
+    font-size: large;
+    text-align: center;
+    vertical-align: baseline;
+    text-transform: capitalize;
+    color: #ffff;
+    font-family: 'Poppins', sans-serif, Arial;
+    font-weight: 500;
+}
+
 .loader .ring {
     height: 10rem;
     width: 10rem;
@@ -77,6 +88,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
 }
   
 .loader .ring::after {
@@ -95,7 +107,6 @@ html {
       transform: rotate(360deg);
     }
 }
-*/
 
 /*similar content styling*/
 section {
@@ -108,7 +119,7 @@ section {
     margin: auto;
 }
 
-.about, .services, .skills, .gallery, .contact, footer{
+.about, .education, .services, .skills, .gallery, .contact, footer{
     font-family: 'Poppins', sans-serif, Arial;
 }
 
@@ -148,6 +159,7 @@ section .title::after {
     left: 50%;
     font-size: 2rem;
     color: var(--nav-blue-semi-main);
+    text-wrap: nowrap;
     padding: 0 1rem;
     background: #fff;
     transform: translateX(-50%);
@@ -181,6 +193,26 @@ section .title::after {
     color: var(--black);
     font-size: 3.5rem;
     font-weight: 500;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar .logo a .icon{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin: -.5rem .4rem 0 0;
+    overflow: hidden;
+   border: .2rem solid black;
+}
+
+.navbar .logo a .icon img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    scale: (0.0);
+    margin-left: -2.2rem;
+    margin-top: -2.0rem;
 }
 
 .navbar .logo a span {
@@ -210,7 +242,7 @@ section .title::after {
     transition: color 0.3s ease;
 }
 .navbar .menu li .menu-btn_active {
-    color: var(--black);
+    color: var(--nav-blue-semi-main);
     pointer-events: none;
 }
 
@@ -301,9 +333,9 @@ section .title::after {
     border: 1rem solid var(--lightgray-bg);
     border-top-left-radius: 500rem;
     border-bottom-right-radius: 500rem;
-  }
+}
 
-  .home .max-width .home-pic img{
+.home .max-width .home-pic img{
     width: 200%;
     height: 200%;
     object-fit: cover;
@@ -312,7 +344,7 @@ section .title::after {
     left: -50%;
     background: rgb(215,215,215);
     background: radial-gradient(circle, rgba(215,215,215,1) 0%, rgba(19,99,127,0.865338633996121) 100%);
-  }
+}
 
 .home .home-content{
       margin-right: 2rem;
@@ -412,7 +444,94 @@ section .title::after {
     background: none;
 }
 
+/* education section styling */
+.education .title::after{
+    content: "My academic Progress";
+}
+.education .edu-content .card{
+    width: calc(100% - 1rem);
+    background: #ddd;
+    padding: 5rem 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    
+    
+}
+.education .edu-content .card:hover{
+    background: var(--nav-blue-semi-main);
+    box-shadow: 2rem 2rem 0.7rem var(--black);
+
+}
+.education .edu-content .card .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: all 0.3s ease;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex: 1 1 20rem;
+} 
+.education .edu-content .card .box .icon_edu {
+    height: 100%;
+    width: 20rem;
+    border: .2rem solid var(--black);
+    border-radius: 3rem;
+    overflow: hidden;
+    background-color: #000;
+}
+.edu-content .card .box .icon_edu .class_pic {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+  
+.edu-content .card .box .text_edu {
+    font-size: 2rem;
+    text-wrap: wrap;
+    margin-left: 2rem;
+}
+  
+.edu-content .card .box .text_edu h2{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+  
+.edu-content .card .box .text_edu p{
+    font-size: 2rem;
+}
+  
+.edu-content .card .box .text_edu span{
+    font-size: 2rem;
+    color: var(--nav-blue-semi-main);
+}
+
+.edu-content .card .box:hover .text_edu span{
+    font-size: 2rem;
+    color: var(--black);
+}
+.edu-content .card .box:hover .text_edu p{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.edu-content .card .box:hover .text_edu h2{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
 /* skills section styling */
+.skills{
+    color:#fff;
+    background: #111;
+}
+
+.skills .title::before{
+    background: #fff;
+}
 
 .skills .title::after {
     background: #111;
@@ -527,14 +646,13 @@ section .title::after {
     margin: 10px 0 7px 0;
 }
 
-/* teams section styling */
+/* portfolio section styling */
 
-.gallery, .skills{
+.gallery {
     color:#fff;
     background: #111;
 }
-.gallery .title::before,
-.skills .title::before{
+.gallery .title::before{
     background: #fff;
 }
 .gallery .title::after {
@@ -572,6 +690,7 @@ section .title::after {
     padding: 1rem;
     margin: 2rem 1rem;
     color: var(--black);
+    font-size: 2rem;
 }
 
 
@@ -640,8 +759,9 @@ section .title::after {
 }
   
 #filter-buttons button.active {
-    color: #fff;
+    color: #ffffff;
     background: var(--black);
+    opacity: 1;
 }
   
 #filterable-cards .card-tabs {
@@ -676,17 +796,71 @@ section .title::after {
     width: calc(50% - 30px);
 }
 
+.contact .left .icons_container {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact .left .icons_container .icons {
+    padding: 1.9rem;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    margin: 0 .3rem;
+    color: #fff;
+    transition: all 0.5s ease;
+    }
+
+.contact .left .icons_container .icons:hover {
+    padding: 2rem;
+    background-color: var(--lightgray-bg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transform: scale(1);
+    position: relative;
+    box-shadow: 2px 2px 0.3rem black;
+    border: .2rem solid var(--black);
+    color: #111;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.contact .left .icons_container .icons i{
+    font-size: 1.8rem;
+}
+
+.contact .left .icons_container .icons h3{
+    font-size: 1rem;
+    text-transform: capitalize;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.contact .left .icons_container .icons p{
+    font-size: 1rem;
+    line-height: 0.9;
+    text-align: center;
+    text-wrap: wrap;
+    }
+
 .contact .left .mapouter { 
     position: relative;
     text-align: right;
     width: 100%;
-    height:400px;
+    height:300px;
 }
 .contact .left .gmap_canvas {
     overflow:hidden;
     background:none!important;
     width:100%;
-    height:40rem;
+    height:100%;
     border-radius: 5rem;
 }
 .contact .left .gmap_iframe {
@@ -790,8 +964,8 @@ footer::before{
 footer .content{
     max-width: 1250px;
     margin: auto;
-    padding: 30px 40px 40px 40px;
-}
+    padding: 10px 40px 40px 40px;
+   }
 
 footer .content .top{
     display: flex;
@@ -799,9 +973,32 @@ footer .content .top{
     justify-content: space-between;
     margin-bottom: 50px;
 }
+
+.content .top .logo-details .icon {
+    width:5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 50%;
+
+}
+
+.content .top .logo-details .icon img{
+    width:5rem;
+    height: 5rem;
+    object-fit: cover;
+    
+}
+
 .content .top .logo-details{
     color: #fff;
     font-size: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.content .top .logo-details .logo_name{
+   margin: auto;
+   padding:  0 0 0 1rem;
 }
 
 .content .top .logo-details .logo_name_semi{
@@ -821,7 +1018,7 @@ footer .content .top{
     color: #fff;
     background: var(--black);
     border: .2rem solid #fff;
-    font-size: 17px;
+    font-size: 40px;
     text-decoration: none;
     transition: all 0.4s ease;
 }
@@ -977,7 +1174,7 @@ z-index: 999;
 .about .about-content .left{
     display: flex;
     justify-content: center;
-    margin:  auto ;
+    margin:  10rem ;
 }
 .about .about-content .right{
     flex: 100%;
@@ -1109,6 +1306,15 @@ footer .content .column_section .box{
     width: 35px;
     font-size: 23px;
     line-height: 38px;
+}
+
+.gallery-content .tab-bar .tab-nav button {
+    text-transform: capitalize;
+    text-align: center;
+    padding: .5rem;
+    margin: 2rem .5rem;
+    color: var(--black);
+    font-size: 1rem;
 }
 
 footer::before{

@@ -541,30 +541,26 @@ section .title::after {
     width: calc(50% - 30px);
 }
 .skills .skills-content .left .text{
-    font-size: 20px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills .skills-content .left .text h2{
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
+    vertical-align: text-top;
 }
-.skills .skills-content .left p{
+.skills .skills-content .left .text p{
     text-align: justify;
-}
-.skills .skills-content .left a{
-    display: inline-block;
-    background: var(--nav-blue-semi-dark);
-    color: #fff;
     font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid var(--nav-blue-semi-main);
-    transition: all 0.3s ease;
+    font-weight: 300;
+    margin-bottom: 10rem;
+    vertical-align: text-bottom;
 }
-.skills .skills-content .left a:hover{
-    color: var(--black);
-    background: var(--white);
-    border-color: var(--lightgray-bg);
-}
+
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
 }
@@ -698,8 +694,9 @@ section .title::after {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; gap: 5px;
-    width: 100%;
+    justify-content: center; gap: 10px;
+    flex-wrap: wrap;
+    width: calc(50% - 2);
 }
 
 .gallery-content .tab-cards .card-tabs{

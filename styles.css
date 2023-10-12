@@ -687,6 +687,7 @@ section .title::after {
     margin: 2rem 1rem;
     color: var(--black);
     font-size: 2rem;
+    cursor: pointer;
 }
 
 
@@ -727,14 +728,24 @@ section .title::after {
     font-weight: 500;
     margin: 10px 0 7px 0;
     color: #000;
+    text-transform: capitalize;
 }
 
-.gallery-content .tab-cards .card-tabs .card-tabs-text {
+.gallery-content .tab-cards .card-tabs .card-tabs-text{
     font-size: 2.0rem;
-    font-weight: 300;
+    font-weight: 500;
     margin: 10px 0 7px 0;
     text-align: center;
     color: #000; 
+}
+
+.gallery-content .tab-cards .card-tabs .card-tabs-text span{
+    font-size: 1.0rem;
+    font-weight: 300;
+    text-align: center;
+    color: #000; 
+    text-transform: uppercase;
+    display: inline-block;
 }
 
 .gallery-content .tab-cards .card-tabs:hover img{

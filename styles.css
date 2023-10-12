@@ -148,7 +148,7 @@ section .title::before {
     position: absolute;
     bottom: 1px;
     left: 50%;
-    width: 40rem;
+    width: 30rem;
     height: .5rem;
     background: #111;
     transform: translateX(-50%);
@@ -683,10 +683,10 @@ section .title::after {
 .gallery-content .tab-bar .tab-nav button {
     text-transform: capitalize;
     text-align: center;
-    padding: 1rem;
+    display: inline-block;
+    padding: .3rem;
     margin: 2rem 1rem;
     color: var(--black);
-    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -1236,9 +1236,6 @@ footer .content .column_section{
     width: 100%;
 }
 
-.gallery .gallery-content .card-tabs{
-    width: 100%;
-}
 
 .gallery .gallery-content .tab-cards{
     width: 100%;
@@ -1246,8 +1243,6 @@ footer .content .column_section{
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-
-
 }
 
 .gallery .gallery-content .card-tabs{
@@ -1323,11 +1318,13 @@ footer .content .column_section .box{
 .gallery-content .tab-bar .tab-nav button {
     text-transform: capitalize;
     text-align: center;
-    padding: .5rem;
+    padding: .3rem;
     margin: 2rem .5rem;
     color: var(--black);
-    font-size: 1rem;
+    cursor: pointer;
 }
+
+
 
 footer::before{
   top: 145px;
@@ -1346,4 +1343,40 @@ footer .content .column_section .box{
 }
 
   
+}
+
+@media (max-width: 375px) {
+
+    .gallery-content .tab-bar .tab-nav button {
+        text-transform: capitalize;
+        text-align: center;
+        display: inline-block;
+        padding: .3rem;
+        margin: 2rem 1rem;
+        color: var(--black);
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+    }
+
+    .gallery .gallery-content .tab-cards{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       margin: 0;
+        
+    }
+    
+    .gallery .gallery-content .card-tabs{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    
+    }
 }

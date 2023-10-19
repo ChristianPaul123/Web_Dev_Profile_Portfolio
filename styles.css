@@ -29,6 +29,7 @@ html {
   --nav-blue-semi-main: #145ecdce;
   --nav-blue-semi-dark:rgba(17, 69, 147, 0.808);
   --lightgray-bg: #f0f8ff9c;
+  --fblack: #111;
 }
 
 /*scroll bar styling*/
@@ -119,9 +120,9 @@ section {
     margin: auto;
 }
 
-.about, .education, .services, .skills, .gallery, .contact, footer{
+.about, .education, .services, .terms, .terms, .gallery, .contact, footer{
     font-family: 'Poppins', sans-serif, Arial;
-}
+  }
 
 .about .about-content,
 .services .serv-content,
@@ -161,7 +162,7 @@ section .title::after {
     color: var(--nav-blue-semi-main);
     text-wrap: nowrap;
     padding: 0 1rem;
-    background: #fff;
+    background: var(--white);
     transform: translateX(-50%);
 }
 
@@ -235,7 +236,7 @@ section .title::after {
 
 .navbar .menu li a {
     display: block;
-    color: #fff;
+    color: var(--white);
     font-size: 1.8rem;
     font-weight: 500;
     margin-left: 2.5rem;
@@ -252,7 +253,7 @@ section .title::after {
 }
 
 .navbar .menu li .menu-btn:hover {
-    color: var(--black);
+    color: var(--lightgray-bg);
 }
 
 .navbar.sticky .menu li .menu-btn:hover {
@@ -262,7 +263,7 @@ section .title::after {
 
 /* menu btn styling */
 .menu-btn {
-    color: #fff;
+    color: var(--white);
     font-size: 2.3rem;
     cursor: pointer;
     display: none;
@@ -368,7 +369,7 @@ section .title::after {
 .home .home-content a{
     display: inline-block;
     background: var(--nav-blue-semi-main);
-    color: #fff;
+    color: var(--white);
     font-size: 25px;
     padding: 1.2rem 3.6rem;
     margin-top: 2.0rem;
@@ -430,7 +431,7 @@ section .title::after {
 .about .about-content .right a{
     display: inline-block;
     background: var(--nav-blue-semi-dark);
-    color: #fff;
+    color: var(--white);
     font-size: 2rem;
     font-weight: 500;
     padding: 1rem 3rem;
@@ -525,12 +526,12 @@ section .title::after {
 
 /* skills section styling */
 .skills{
-    color:#fff;
+    color:var(--white);
     background: #111;
 }
 
 .skills .title::before{
-    background: #fff;
+    background: var(--white);
 }
 
 .skills .title::after {
@@ -613,7 +614,7 @@ section .title::after {
     width: calc(33% - 1rem);
     background: #ddd;
     text-align: center;
-    border-radius: .6rem;
+    border-radius: 2rem;
     padding: 5rem 2.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -621,6 +622,7 @@ section .title::after {
 }
 .services .serv-content .card:hover{
     background: var(--nav-blue-semi-main);
+    box-shadow: 2rem 2rem 0.7rem var(--black);
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -634,7 +636,7 @@ section .title::after {
     transition: color 0.5s ease;
 }
 .services .serv-content .card:hover i{
-    color: #fff;
+    color: var(--white);
 }
 .services .serv-content .card .text{
     font-size: 2.5rem;
@@ -645,11 +647,11 @@ section .title::after {
 /* portfolio section styling */
 
 .gallery {
-    color:#fff;
+    color:var(--white);
     background: #111;
 }
 .gallery .title::before{
-    background: #fff;
+    background: var(--white);
 }
 .gallery .title::after {
     background: #111;
@@ -754,7 +756,7 @@ section .title::after {
 
 #filter-buttons button {
     border-radius: .5rem;
-    background: #fff;
+    background: var(--white);
     border-color: transparent;
     font-size: 2.5rem;
     transition: 0.3s ease-in-out all;
@@ -794,13 +796,123 @@ section .title::after {
     display: none;
 }
 
+/* terms section styling */
+.terms{
+    color:var(--black);
+    background: var(--white);
+  }
+
+.terms-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.terms .title::before{
+    background: var(--fblack);
+}
+  
+.terms .title::after {
+    background: var(--white);
+    content: "Terms of Service";
+}
+.terms .terms-content .column{
+    width: calc(50% - 2rem);
+}
+  
+.terms .terms-content .left-content {
+    height: 40rem;
+    overflow: scroll;
+}
+  
+.terms .terms-content .left .text{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ddd;
+    color: var(--fblack);
+    border-radius: 2rem;
+}
+  
+.terms .terms-content .left .left-content .text h2{
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.0rem;
+    vertical-align: text-top;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.terms .terms-content .left .left-content .text p{
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 10rem;
+    vertical-align: text-bottom;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+  
+  .terms .terms-content .left .left-content .text p span{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 10rem;
+    vertical-align: text-bottom;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+  
+  .terms .terms-content .right-content {
+    height: 40rem;
+    overflow: scroll;
+}
+  
+  .terms .terms-content .right .right-content .text{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #ddd;
+    color: var(--fblack);
+    border-radius: 2rem;
+}
+
+  .terms .terms-content .right .right-content .text h2{
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.0rem;
+    vertical-align: text-top;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+  .terms .terms-content .right .right-content .text p{
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 10rem;
+    vertical-align: text-bottom;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+  
+  .terms .terms-content .right .right-content .text p span{
+    text-align: justify;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 10rem;
+    vertical-align: text-bottom;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 
 /* contact section styling */
 .contact .title::after{
     content: "Email Me";
 }
 .contact .contact-content .column{
-    width: calc(50% - 40px);
+    width: calc(50% - 4rem);
     height: auto;
 }
 
@@ -811,7 +923,6 @@ section .title::after {
     justify-content: center;
     margin: 0 1rem 0 1rem;
 }
-
 
 .contact .left .icons_container .icons {
     padding: 1rem;
@@ -950,7 +1061,7 @@ section .title::after {
     align-items: center;
 }
 .right form .button-area button{
-    color: #fff;
+    color: var(--white);
     display: block;
     width: 100%!important;
     height: 4.5rem;
@@ -975,7 +1086,7 @@ section .title::after {
 footer{
     background: #000000;
     padding: 1.5rem 2.3rem;
-    color: #fff;
+    color: var(--white);
     position: relative;
     width: 100%;
     text-align: center;
@@ -1079,7 +1190,7 @@ footer .content .top{
 }
 
 .content .top .logo-details{
-    color: #fff;
+    color: var(--white);
     font-size: 3rem;
     display: flex;
     flex-direction: row;
@@ -1104,9 +1215,9 @@ footer .content .top{
     border-radius: 2%;
     text-align: center;
     line-height: 4rem;
-    color: #fff;
+    color: var(--white);
     background: var(--black);
-    border: .2rem solid #fff;
+    border: .2rem solid var(--white);
     font-size: 4rem;
     text-decoration: none;
     transition: all 0.4s ease;
@@ -1115,7 +1226,7 @@ footer .content .top{
 
 .top .media-icons a:hover{
     color: var(--nav-blue-semi-main);
-    background: #fff;
+    background: var(--white);
     transform: translateY(-1rem);
 }
 
@@ -1129,7 +1240,7 @@ footer .content .column_section .box{
     width: calc(100% / 4 - 1rem);
 }
 .content .column_section .box .link_name{
-    color: #fff;
+    color: var(--white);
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 1.0rem;
@@ -1142,14 +1253,14 @@ footer .content .column_section .box{
     bottom: -2px;
     height: .2rem;
     width: 3.5rem;
-    background: #fff;
+    background: var(--white);
 }
 .content .column_section .box li{
     margin: .6rem 0;
     list-style: none;
 }
 .content .column_section .box li a{
-    color: #fff;
+    color: var(--white);
     font-size: 1.4rem;
     font-weight: 400;
     text-decoration: none;
@@ -1179,7 +1290,7 @@ footer .bottom-details .bottom_text{
 .bottom-details .bottom_text a{
     font-size: 1.4rem;
     font-weight: 300;
-    color: #fff;
+    color: var(--white);
     opacity: 0.8;
     text-decoration: none;
 }
@@ -1296,10 +1407,24 @@ footer .content .column_section{
     bottom: -2px;
     height: .2rem;
     width: 3.5rem;
-    background: #fff;
+    background: var(--white);
   }
 
+  .terms .terms-content .left .left-content .text h2,  
+  .terms .terms-content .right .right-content .text h2 {
+    font-size: 1.5rem;
+  }
 
+  .terms .terms-content .left .left-content .text p,
+  .terms .terms-content .right .right-content .text p {
+    font-size: 1.3rem;
+  }
+
+  .terms .terms-content .left .left-content .text p span,
+  .terms .terms-content .right .right-content .text p span {
+
+    font-size: 1.4rem;
+  }
 
 }
 

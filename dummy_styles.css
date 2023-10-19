@@ -1,0 +1,218 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+/*HTML configuration*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/*colors used in styling*/
+:root{
+  --white: #fff;
+  --black: #24292d;
+  --nav-blue-semi-main: #145ecdce;
+  --nav-blue-semi-dark:rgba(17, 69, 147, 0.808);
+  --lightgray-bg: #f0f8ff9c;
+  --fblack: #111;
+}
+
+/*scroll bar styling*/
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar:hover{
+    width: 1.2rem;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #535252;
+    position: absolute;
+}
+
+section {
+  padding: 8rem 0 5rem 0;
+}
+
+.max-width {
+  max-width: 140rem;
+  padding: 0 8rem;
+  margin: auto;
+}
+
+.about, .education, .services, .terms, .terms, .gallery, .contact, footer{
+  font-family: 'Poppins', sans-serif, Arial;
+}
+
+.about .about-content,
+.services .serv-content,
+.skills .terms-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terms-content {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 7rem;
+  padding-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: .1rem;
+  left: 50%;
+  width: 30rem;
+  height: .5rem;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .title::after {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  font-size: 2rem;
+  color: var(--nav-blue-semi-main);
+  text-wrap: nowrap;
+  padding: 0 1rem;
+  background: var(--white);
+  transform: translateX(-50%);
+}
+
+/* skills section styling */
+.terms{
+  color:var(--black);
+  background: var(--white);
+}
+
+.terms .title::before{
+  background: var(--fblack);
+}
+
+.terms .title::after {
+  background: var(--white);
+  content: "Terms of Service";
+}
+.terms .terms-content .column{
+  width: calc(50% - 2rem);
+}
+
+.terms .terms-content .left-content {
+  height: 40rem;
+  overflow: scroll;
+}
+
+.terms .terms-content .left .text{
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ddd;
+  color: var(--fblack);
+  border-radius: 2rem;
+}
+
+.terms .terms-content .left .left-content .text h2{
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.0rem;
+  vertical-align: text-top;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.terms .terms-content .left .left-content .text p{
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 10rem;
+  vertical-align: text-bottom;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.terms .terms-content .left .left-content .text p span{
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 10rem;
+  vertical-align: text-bottom;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.terms .terms-content .right-content {
+  height: 40rem;
+  overflow: scroll;
+}
+
+.terms .terms-content .right .right-content .text{
+  flex-direction: column;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: #ddd;
+  color: var(--fblack);
+  border-radius: 2rem;
+}
+
+.terms .terms-content .right .right-content .text h2{
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.0rem;
+  vertical-align: text-top;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.terms .terms-content .right .right-content .text p{
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 10rem;
+  vertical-align: text-bottom;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.terms .terms-content .right .right-content .text p span{
+  text-align: justify;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 10rem;
+  vertical-align: text-bottom;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
